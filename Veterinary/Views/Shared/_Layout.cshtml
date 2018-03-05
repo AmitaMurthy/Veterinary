@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="~/Views/Shared/StyleSheet1.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url('../Images/dog_baground.jpg');
+            height: 100%;
+            background-size: 100%;
+        }
+
+        #section_head {
+            height: 75%;
+        }
+
+
+        .container {
+            width: 100%;
+        }
+
+
+
+        #div_address_bar {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        #address_bar {
+            padding-top: 18px;
+            background: linear-gradient(orange, yellow);
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            width: 100%;
+            text-align: right;
+            font-family: Raleway;
+        }
+
+        #logo {
+            padding-top: 0;
+        }
+
+        #div_Navigation_bar {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+
+        #Navigation_bar {
+            border-bottom: 10px solid #ffd700;
+            border-top: 10px solid #ffd700;
+            padding: 0;
+        }
+
+        #nav_tabs {
+            padding-top: 55px;
+            padding-bottom: 75px;
+            padding-right: 80px;
+            padding-left: 130px;
+           
+            background-image: url('../../Images/2903-textures-background-cool-wallpaper-hdwallpapers-wallpapers.jpg');
+            
+            /*background: linear-gradient(to bottom right, #c3834c, #A0522D);*/
+        }
+
+        #div_contents {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        #contents {
+            min-height: 600px;
+        }
+
+        #div_footer {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        #footer {
+            border-top: 10px solid #A0522D;
+            background: linear-gradient(orange, yellow);
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: Raleway;
+            height: 25%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="div_address_bar">
+        <div class="container" id="address_bar">
+            <p>2008 HUDSON ROAD, SUITE 4001 | WEBSTER, Houston 50087 | (000)-000-0000</p>
+        </div>
+    </div>
+
+    <div id="div_Navigation_bar">
+        <nav class="navbar navbar-default col-md-12" id="Navigation_bar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <a class="navbar-brand img-responsive" href="#" id="logo"><img src="~/Images/Logo.PNG" style="height:200px; width:300px;" /></a>
+                </div>
+                <div id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right col-md-8" id="nav_tabs">
+
+                        <li><a href="#">@Html.ActionLink("Home", "Index", "Home", null, new { style = "color:ghostwhite; font-size:large ; font-family:Raleway;" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Services", "Index", "Services", null, new { style = "color:ghostwhite; font-size:large; font-family:Raleway;" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Contact Us", "Index", "ContactUs", null, new { style = "color:ghostwhite; font-size:large; font-family:Raleway;" })</a></li>
+                        <li><a href="#">@Html.ActionLink("Login", "Index", "Login", null, new { style = "color:ghostwhite; font-size:large; font-family:Raleway;" })</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="div_contents" style="padding:0;">
+        <div class="container" id="contents" style="padding:0">
+            @RenderBody()
+        </div>
+    </div>
+
+    <div id="div_footer">
+        <div class="container" id="footer">
+            <div class="col-md-4">
+                <p>
+                    <div>Hospital Hours </div>
+                    <div>Monday-Friday:8am-7pm</div>
+                    <div>Saturday:2pm</div>
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <p>
+                    <div>2008 HUDSON ROAD, SUITE 4001</div>
+                    <div>WEBSTER, Houston 50087</div>
+                    <div>
+                        (000)-000-0000
+                    </div>
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+                <p>
+                    <div>Assignment 4</div>
+                    <div>MVC concepts</div>
+                    <div>
+                        By:Amita Murthy
+                    </div>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
